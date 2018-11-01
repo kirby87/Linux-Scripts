@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This will install home bridge on your raspberry-pi.
 ### This must be run as sudo ###
