@@ -11,22 +11,22 @@ apt-get upgrade
 
 # Check the version of Node on the System
 echo Checking the version of Node on your system
-$NodeVersion=node --version
+NodeVersion=node --version
 echo "$NodeVersion"
 if "$NodeVersion" -ge 4.3; then 
-    $install="Yes"
+    varInstall="Yes"
 else
-    $install="No"
+    varInstall="No"
 fi
 
 # Install homebridge
-if "$install"="Yes"; then
+if "$varInstall"="Yes"; then
    echo "Installing HomeBridge now."
    # Install the libavahi-compat-libdnssd-dev package: 
    sudo apt-get install libavahi-compat-libdnssd-dev
    # Install Homebridge using npm:
    sudo npm install -g --unsafe-perm homebridge
-elseif "$install"="No"; then
+elseif "$varInstall"="No"; then
   echo "Not Cool. You need to get a new version of Node on your system."
   sleep 3
   exit 0
