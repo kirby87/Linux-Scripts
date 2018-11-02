@@ -23,7 +23,7 @@ then
    sudo apt-get install libavahi-compat-libdnssd-dev
    # Install Homebridge using npm:
    sudo npm install -g --unsafe-perm homebridge
-elseif [ $VAR_INSTALL="No" ] ;
+elseif [ "$VAR_INSTALL" == "No" ] ;
 then
   echo "Not Cool. You need to get a new version of Node on your system."
   sleep 3
